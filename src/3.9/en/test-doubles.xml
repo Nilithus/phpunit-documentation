@@ -983,9 +983,25 @@ class GoogleTest extends PHPUnit_Framework_TestCase
     </para>
 
     <para>
-      To install vfsStream, the PEAR channel
-      (<systemitem role="URL">pear.bovigo.org</systemitem>) that is used for
-      its distribution needs to be registered with the local PEAR environment:
+      The simplest way to include vfsStream would to add the
+      <literal>mikey179/vfsStream</literal> to your projects
+      <literal>composer.json</literal> file if you use 
+      <ulink url="http://getcomposer.org/">Composer</ulink> to manage your
+      project dependencies. An example of including vfsStream via composer
+      would be as follows:
+    </para>
+
+    <programlisting><![CDATA[{
+    "require-dev": {
+        "mikey179/vfsStream": "1.*"
+    }
+}]]></programlisting>
+
+    <para>
+      For versions of vfsStream before version 1.0.0 you can install via 
+      the PEAR channel (<systemitem role="URL">pear.bovigo.org</systemitem>) 
+      that is used for its distribution needs to be registered with the local 
+      PEAR environment:
     </para>
 
     <screen><userinput>pear channel-discover pear.bovigo.org</userinput></screen>
